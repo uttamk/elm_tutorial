@@ -1,9 +1,20 @@
-module Models exposing (Model, init)
+module Models exposing (..)
 
-import Msgs exposing(..)
+
 type alias Model =
-  String
+     { players : List Player }
 
-init: (Model, Cmd Msg)
-init =
-  ("Hello", Cmd.none)
+initialModel : Model
+initialModel =
+     { players = [ Player "1" "Sam" 1 ] }
+
+
+type alias PlayerId =
+        String
+
+type alias Player =
+      {
+          id: PlayerId
+        , name: String
+        , level: Int
+    }

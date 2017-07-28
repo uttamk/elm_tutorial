@@ -1,6 +1,6 @@
 module Update exposing (update)
-import Msgs exposing (..)
-import Models exposing (..)
+import Models exposing (Model)
+import Msgs exposing (Msg(NoOp))
 
 update: Msg -> Model -> (Model, Cmd Msg)
 update msg model =
